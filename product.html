@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product | AURELIA</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="simple-header">
+
+    <a href="index.html" class="logo">
+        <img src="C:\Users\kamadhenu BCA\Desktop\kavanas\kw.png" alt="AURELIA Logo" class="logo-image">
+        <span class="logo-name">AURELIA</span>
+        <span class="logo-sub">HOUSE OF JEWELS</span>
+    </a>
+
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="collections.html">COLLECTIONS</a>
+        <a href="index.html#about">ABOUT US</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+
+</header>
+
+
+<main class="product-page">
+
+    <div class="product-details">
+
+        <div class="product-large-image">
+            <img id="productImage"
+                 src=""
+                 alt="Jewellery Product">
+        </div>
+
+
+        <div class="product-info">
+
+            <p class="small-title">
+                AURELIA JEWELLERY
+            </p>
+
+            <h1 id="productName">
+                Product
+            </h1>
+
+            <h2 id="productPrice">
+                ₹0
+            </h2>
+
+            <p id="productDescription">
+                Beautifully crafted jewellery designed
+                with elegance and timeless style.
+            </p>
+
+            <a id="buyButton"
+               href="#"
+               class="buy-button">
+                BUY NOW
+            </a>
+
+            <br><br>
+
+            <a href="collections.html"
+               class="back-button">
+                ← BACK TO COLLECTIONS
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script>
+
+const products = {
+
+    "gold-ring-1": {
+        name: "Golden Classic Ring",
+        price: "₹19,999",
+        image: "images/gold-ring-1.jpg",
+        description: "A beautiful classic gold ring designed for timeless elegance."
+    },
+
+    "gold-ring-2": {
+        name: "Royal Gold Ring",
+        price: "₹29,999",
+        image: "images/gold-ring-2.jpg",
+        description: "A royal gold ring crafted with an elegant premium finish."
+    },
+
+    "gold-ring-3": {
+        name: "Diamond Gold Ring",
+        price: "₹39,999",
+        image: "images/gold-ring-3.jpg",
+        description: "Elegant gold ring featuring a beautiful diamond design."
+    },
+
+    "gold-ring-4": {
+        name: "Elegant Gold Band",
+        price: "₹49,999",
+        image: "images/gold-ring-4.jpg",
+        description: "A sophisticated gold band perfect for special occasions."
+    },
+
+    "gold-ring-5": {
+        name: "Floral Gold Ring",
+        price: "₹59,999",
+        image: "images/gold-ring-5.jpg",
+        description: "A delicate floral-inspired gold ring with beautiful detailing."
+    },
+
+    "gold-ring-6": {
+        name: "Classic Diamond Ring",
+        price: "₹69,999",
+        image: "images/gold-ring-6.jpg",
+        description: "A classic diamond ring combining gold and timeless beauty."
+    },
+
+    "gold-ring-7": {
+        name: "Royal Diamond Ring",
+        price: "₹79,999",
+        image: "images/gold-ring-7.jpg",
+        description: "A luxurious royal diamond ring created for elegant occasions."
+    },
+
+    "gold-ring-8": {
+        name: "Luxury Gold Ring",
+        price: "₹89,999",
+        image: "images/gold-ring-8.jpg",
+        description: "A premium luxury gold ring with an elegant statement design."
+    },
+
+
+    "gold-necklace-1": {
+        name: "Classic Gold Necklace",
+        price: "₹39,999",
+        image: "images/gold-necklace-1.jpg",
+        description: "A timeless classic gold necklace for elegant occasions."
+    },
+
+    "gold-necklace-2": {
+        name: "Royal Gold Necklace",
+        price: "₹49,999",
+        image: "images/gold-necklace-2.jpg",
+        description: "A royal gold necklace designed with sophisticated detailing."
+    },
+
+    "gold-necklace-3": {
+        name: "Diamond Gold Necklace",
+        price: "₹59,999",
+        image: "images/gold-necklace-3.jpg",
+        description: "A beautiful diamond gold necklace with a luxurious appearance."
+    },
+
+    "gold-necklace-4": {
+        name: "Elegant Gold Necklace",
+        price: "₹69,999",
+        image: "images/gold-necklace-4.jpg",
+        description: "An elegant necklace crafted to add grace to every occasion."
+    },
+
+    "gold-necklace-5": {
+        name: "Traditional Gold Necklace",
+        price: "₹79,999",
+        image: "images/gold-necklace-5.jpg",
+        description: "A traditional gold necklace inspired by classic jewellery designs."
+    },
+
+    "gold-necklace-6": {
+        name: "Bridal Gold Necklace",
+        price: "₹89,999",
+        image: "images/gold-necklace-6.jpg",
+        description: "A beautiful bridal necklace designed for memorable celebrations."
+    },
+
+    "gold-necklace-7": {
+        name: "Luxury Gold Necklace",
+        price: "₹99,999",
+        image: "images/gold-necklace-7.jpg",
+        description: "A luxury gold necklace with a sophisticated statement design."
+    },
+
+    "gold-necklace-8": {
+        name: "Grand Gold Necklace",
+        price: "₹1,09,999",
+        image: "images/gold-necklace-8.jpg",
+        description: "A grand gold necklace created for elegant and special moments."
+    },
+
+
+    "gold-earrings-1": {
+        name: "Classic Gold Earrings",
+        price: "₹19,999",
+        image: "images/gold-earrings-1.jpg",
+        description: "Classic gold earrings designed for simple everyday elegance."
+    },
+
+    "gold-earrings-2": {
+        name: "Royal Gold Earrings",
+        price: "₹24,999",
+        image: "images/gold-earrings-2.jpg",
+        description: "Royal gold earrings with an elegant premium design."
+    },
+
+    "gold-earrings-3": {
+        name: "Diamond Gold Earrings",
+        price: "₹29,999",
+        image: "images/gold-earrings-3.jpg",
+        description: "Beautiful diamond gold earrings designed to shine elegantly."
+    },
+
+    "gold-earrings-4": {
+        name: "Elegant Gold Earrings",
+        price: "₹34,999",
+        image: "images/gold-earrings-4.jpg",
+        description: "Elegant gold earrings perfect for graceful occasions."
+    },
+
+    "gold-earrings-5": {
+        name: "Floral Gold Earrings",
+        price: "₹39,999",
+        image: "images/gold-earrings-5.jpg",
+        description: "Delicate floral gold earrings with beautiful detailing."
+    },
+
+    "gold-earrings-6": {
+        name: "Diamond Drop Earrings",
+        price: "₹44,999",
+        image: "images/gold-earrings-6.jpg",
+        description: "Elegant diamond drop earrings designed for a luxurious look."
+    },
+
+    "gold-earrings-7": {
+        name: "Luxury Gold Earrings",
+        price: "₹49,999",
+        image: "images/gold-earrings-7.jpg",
+        description: "Luxury gold earrings created with a sophisticated finish."
+    },
+
+    "gold-earrings-8": {
+        name: "Grand Gold Earrings",
+        price: "₹54,999",
+        image: "images/gold-earrings-8.jpg",
+        description: "Grand gold earrings designed for unforgettable occasions."
+    },
+
+
+    "silver-ring-1": {
+        name: "Classic Silver Ring",
+        price: "₹9,999",
+        image: "images/silver-ring-1.jpg",
+        description: "A classic silver ring designed for simple elegance."
+    },
+
+    "silver-ring-2": {
+        name: "Royal Silver Ring",
+        price: "₹12,999",
+        image: "images/silver-ring-2.jpg",
+        description: "A royal silver ring with a beautiful premium finish."
+    },
+
+    "silver-ring-3": {
+        name: "Diamond Silver Ring",
+        price: "₹15,999",
+        image: "images/silver-ring-3.jpg",
+        description: "A beautiful silver ring featuring a diamond-inspired design."
+    },
+
+    "silver-ring-4": {
+        name: "Elegant Silver Ring",
+        price: "₹18,999",
+        image: "images/silver-ring-4.jpg",
+        description: "An elegant silver ring perfect for everyday style."
+    },
+
+    "silver-ring-5": {
+        name: "Floral Silver Ring",
+        price: "₹21,999",
+        image: "images/silver-ring-5.jpg",
+        description: "A delicate floral silver ring with elegant detailing."
+    },
+
+    "silver-ring-6": {
+        name: "Classic Diamond Silver Ring",
+        price: "₹24,999",
+        image: "images/silver-ring-6.jpg",
+        description: "A classic silver ring with beautiful diamond detailing."
+    },
+
+    "silver-ring-7": {
+        name: "Luxury Silver Ring",
+        price: "₹27,999",
+        image: "images/silver-ring-7.jpg",
+        description: "A luxurious silver ring with a sophisticated appearance."
+    },
+
+    "silver-ring-8": {
+        name: "Grand Silver Ring",
+        price: "₹29,999",
+        image: "images/silver-ring-8.jpg",
+        description: "A grand silver ring designed for special occasions."
+    },
+
+
+    "silver-necklace-1": {
+        name: "Classic Silver Necklace",
+        price: "₹19,999",
+        image: "images/silver-necklace-1.jpg",
+        description: "A classic silver necklace for elegant everyday styling."
+    },
+
+    "silver-necklace-2": {
+        name: "Royal Silver Necklace",
+        price: "₹24,999",
+        image: "images/silver-necklace-2.jpg",
+        description: "A royal silver necklace with beautiful detailing."
+    },
+
+    "silver-necklace-3": {
+        name: "Diamond Silver Necklace",
+        price: "₹29,999",
+        image: "images/silver-necklace-3.jpg",
+        description: "A diamond-inspired silver necklace with a luxurious finish."
+    },
+
+    "silver-necklace-4": {
+        name: "Elegant Silver Necklace",
+        price: "₹34,999",
+        image: "images/silver-necklace-4.jpg",
+        description: "An elegant silver necklace suitable for every occasion."
+    },
+
+    "silver-necklace-5": {
+        name: "Traditional Silver Necklace",
+        price: "₹39,999",
+        image: "images/silver-necklace-5.jpg",
+        description: "A traditional silver necklace inspired by classic jewellery."
+    },
+
+    "silver-necklace-6": {
+        name: "Bridal Silver Necklace",
+        price: "₹44,999",
+        image: "images/silver-necklace-6.jpg",
+        description: "A beautiful bridal silver necklace for special celebrations."
+    },
+
+    "silver-necklace-7": {
+        name: "Luxury Silver Necklace",
+        price: "₹49,999",
+        image: "images/silver-necklace-7.jpg",
+        description: "A luxury silver necklace with a refined design."
+    },
+
+    "silver-necklace-8": {
+        name: "Grand Silver Necklace",
+        price: "₹54,999",
+        image: "images/silver-necklace-8.jpg",
+        description: "A grand silver necklace for memorable occasions."
+    },
+
+
+    "silver-earrings-1": {
+        name: "Classic Silver Earrings",
+        price: "₹9,999",
+        image: "images/silver-earrings-1.jpg",
+        description: "Classic silver earrings designed for everyday elegance."
+    },
+
+    "silver-earrings-2": {
+        name: "Royal Silver Earrings",
+        price: "₹12,999",
+        image: "images/silver-earrings-2.jpg",
+        description: "Royal silver earrings with a beautiful sophisticated design."
+    },
+
+    "silver-earrings-3": {
+        name: "Diamond Silver Earrings",
+        price: "₹15,999",
+        image: "images/silver-earrings-3.jpg",
+        description: "Elegant silver earrings featuring a diamond-inspired design."
+    },
+
+    "silver-earrings-4": {
+        name: "Elegant Silver Earrings",
+        price: "₹18,999",
+        image: "images/silver-earrings-4.jpg",
+        description: "Elegant silver earrings perfect for special occasions."
+    },
+
+    "silver-earrings-5": {
+        name: "Floral Silver Earrings",
+        price: "₹21,999",
+        image: "images/silver-earrings-5.jpg",
+        description: "Beautiful floral silver earrings with delicate detailing."
+    },
+
+    "silver-earrings-6": {
+        name: "Diamond Drop Silver Earrings",
+        price: "₹24,999",
+        image: "images/silver-earrings-6.jpg",
+        description: "Elegant diamond drop silver earrings with a luxurious look."
+    },
+
+    "silver-earrings-7": {
+        name: "Luxury Silver Earrings",
+        price: "₹27,999",
+        image: "images/silver-earrings-7.jpg",
+        description: "Luxury silver earrings with a sophisticated finish."
+    },
+
+    "silver-earrings-8": {
+        name: "Grand Silver Earrings",
+        price: "₹29,999",
+        image: "images/silver-earrings-8.jpg",
+        description: "Grand silver earrings designed for beautiful occasions."
+    },
+
+
+    "platinum-ring-1": {
+        name: "Classic Platinum Ring",
+        price: "₹39,999",
+        image: "images/platinum-ring-1.jpg",
+        description: "A classic platinum ring with a timeless elegant finish."
+    },
+
+    "platinum-ring-2": {
+        name: "Royal Platinum Ring",
+        price: "₹49,999",
+        image: "images/platinum-ring-2.jpg",
+        description: "A royal platinum ring designed for sophisticated elegance."
+    },
+
+    "platinum-ring-3": {
+        name: "Diamond Platinum Ring",
+        price: "₹59,999",
+        image: "images/platinum-ring-3.jpg",
+        description: "A beautiful platinum ring with elegant diamond detailing."
+    },
+
+    "platinum-ring-4": {
+        name: "Elegant Platinum Ring",
+        price: "₹69,999",
+        image: "images/platinum-ring-4.jpg",
+        description: "An elegant platinum ring created for timeless style."
+    },
+
+    "platinum-ring-5": {
+        name: "Floral Platinum Ring",
+        price: "₹79,999",
+        image: "images/platinum-ring-5.jpg",
+        description: "A beautiful floral-inspired platinum ring."
+    },
+
+    "platinum-ring-6": {
+        name: "Diamond Platinum Band",
+        price: "₹89,999",
+        image: "images/platinum-ring-6.jpg",
+        description: "A premium platinum band with elegant diamond detailing."
+    },
+
+    "platinum-ring-7": {
+        name: "Luxury Platinum Ring",
+        price: "₹99,999",
+        image: "images/platinum-ring-7.jpg",
+        description: "A luxury platinum ring with a sophisticated design."
+    },
+
+    "platinum-ring-8": {
+        name: "Grand Platinum Ring",
+        price: "₹1,09,999",
+        image: "images/platinum-ring-8.jpg",
+        description: "A grand platinum ring designed for unforgettable moments."
+    },
+
+
+    "platinum-necklace-1": {
+        name: "Classic Platinum Necklace",
+        price: "₹69,999",
+        image: "images/platinum-necklace-1.jpg",
+        description: "A classic platinum necklace with timeless elegance."
+    },
+
+    "platinum-necklace-2": {
+        name: "Royal Platinum Necklace",
+        price: "₹79,999",
+        image: "images/platinum-necklace-2.jpg",
+        description: "A royal platinum necklace with a premium finish."
+    },
+
+    "platinum-necklace-3": {
+        name: "Diamond Platinum Necklace",
+        price: "₹89,999",
+        image: "images/platinum-necklace-3.jpg",
+        description: "A luxurious platinum necklace featuring elegant diamond detailing."
+    },
+
+    "platinum-necklace-4": {
+        name: "Elegant Platinum Necklace",
+        price: "₹99,999",
+        image: "images/platinum-necklace-4.jpg",
+        description: "An elegant platinum necklace designed for special occasions."
+    },
+
+    "platinum-necklace-5": {
+        name: "Traditional Platinum Necklace",
+        price: "₹1,09,999",
+        image: "images/platinum-necklace-5.jpg",
+        description: "A traditional platinum necklace with a sophisticated design."
+    },
+
+    "platinum-necklace-6": {
+        name: "Bridal Platinum Necklace",
+        price: "₹1,19,999",
+        image: "images/platinum-necklace-6.jpg",
+        description: "A premium bridal platinum necklace for memorable celebrations."
+    },
+
+    "platinum-necklace-7": {
+        name: "Luxury Platinum Necklace",
+        price: "₹1,29,999",
+        image: "images/platinum-necklace-7.jpg",
+        description: "A luxury platinum necklace with a refined appearance."
+    },
+
+    "platinum-necklace-8": {
+        name: "Grand Platinum Necklace",
+        price: "₹1,39,999",
+        image: "images/platinum-necklace-8.jpg",
+        description: "A grand platinum necklace designed for elegant occasions."
+    },
+
+
+    "platinum-earrings-1": {
+        name: "Classic Platinum Earrings",
+        price: "₹39,999",
+        image: "images/platinum-earrings-1.jpg",
+        description: "Classic platinum earrings designed for timeless beauty."
+    },
+
+    "platinum-earrings-2": {
+        name: "Royal Platinum Earrings",
+        price: "₹49,999",
+        image: "images/platinum-earrings-2.jpg",
+        description: "Royal platinum earrings with a sophisticated design."
+    },
+
+    "platinum-earrings-3": {
+        name: "Diamond Platinum Earrings",
+        price: "₹59,999",
+        image: "images/platinum-earrings-3.jpg",
+        description: "Beautiful platinum earrings with diamond-inspired detailing."
+    },
+
+    "platinum-earrings-4": {
+        name: "Elegant Platinum Earrings",
+        price: "₹69,999",
+        image: "images/platinum-earrings-4.jpg",
+        description: "Elegant platinum earrings for graceful occasions."
+    },
+
+    "platinum-earrings-5": {
+        name: "Floral Platinum Earrings",
+        price: "₹79,999",
+        image: "images/platinum-earrings-5.jpg",
+        description: "Beautiful floral platinum earrings with delicate detailing."
+    },
+
+    "platinum-earrings-6": {
+        name: "Diamond Drop Platinum Earrings",
+        price: "₹89,999",
+        image: "images/platinum-earrings-6.jpg",
+        description: "Luxury diamond drop platinum earrings."
+    },
+
+    "platinum-earrings-7": {
+        name: "Luxury Platinum Earrings",
+        price: "₹99,999",
+        image: "images/platinum-earrings-7.jpg",
+        description: "Luxury platinum earrings with a premium finish."
+    },
+
+    "platinum-earrings-8": {
+        name: "Grand Platinum Earrings",
+        price: "₹1,09,999",
+        image: "images/platinum-earrings-8.jpg",
+        description: "Grand platinum earrings created for special occasions."
+    }
+
+};
+
+
+const params = new URLSearchParams(window.location.search);
+
+const type = params.get("type");
+const id = params.get("id");
+
+const product = products[type + "-" + id];
+
+
+if (product) {
+
+    document.getElementById("productName").textContent =
+        product.name;
+
+    document.getElementById("productPrice").textContent =
+        product.price;
+
+    document.getElementById("productImage").src =
+        product.image;
+
+    document.getElementById("productImage").alt =
+        product.name;
+
+    document.getElementById("productDescription").textContent =
+        product.description;
+
+    document.getElementById("buyButton").href =
+        "contact.html?product=" +
+        encodeURIComponent(product.name);
+
+}
+
+</script>
+
+</body>
+</html>
